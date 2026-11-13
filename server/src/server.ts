@@ -7,9 +7,11 @@
 
 import * as dotenv from "dotenv";
 dotenv.config(); // loads server/.env (or cwd/.env when run from server/)
-
+import path from "node:path";
+import express from "express";
 import { app } from "./app";
 
+app.use(express.static(path.resolve(__dirname, "../../web/dist")));
 const port = Number(process.env.PORT) || 3000;
 
 app.listen(port, () => {
