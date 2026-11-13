@@ -1,0 +1,22 @@
+{
+  "name": "local-rescue-bid-server",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc --noEmit",
+    "demo": "ts-node src/runDemo.ts",
+    "dev": "ts-node src/server.ts",
+    "start": "node dist/server.js"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^20.19.43",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@ibm-cloud/cloudant": "^0.12.27",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0"
+  }
+}

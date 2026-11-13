@@ -1,0 +1,8 @@
+﻿# Environment -- keep real credentials out of Git
+.env
+
+# Compiled output
+dist/
+
+# Dependencies
+node_modules/
