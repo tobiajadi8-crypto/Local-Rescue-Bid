@@ -1,6 +1,7 @@
 import {
   ExtractRequestSchema,
   ExtractResponseSchema,
+  LiveExtractResponseSchema,
   MatchRequestSchema,
   MatchResponseSchema,
   OutcomeSchema,
@@ -231,7 +232,25 @@ export async function extractPacket(packetText: string): Promise<ExtractResponse
   if (USE_FIXTURES) return extractFixture(packetText);
 
   const reqBody = ExtractRequestSchema.parse({ packet_text: packetText });
-  return postJson<ExtractResponse>('/api/extract', reqBody, ExtractResponseSchema);
+
+  // The live API returns { requirements: {...}, sources: {...}, issues: [...] }.
+  // Parse through LiveExtractResponseSchema, then normalize to the flat shape
+  // that the rest of the app (and fixtures) use.
+  const live = await postJson<import('./schemas').LiveExtractResponse>(
+    '/api/extract',
+    reqBody,
+    LiveExtractResponseSchema,
+  );
+
+  const flat: ExtractResponse = {
+    ...live.requirements,
+    issues: live.issues,
+    tolerance_source_values: live.tolerance_source_values ?? [],
+    sources: live.sources,
+  };
+
+  // Validate the normalized flat shape before handing it to the UI.
+  return ExtractResponseSchema.parse(flat);
 }
 
 export async function matchSuppliers(
@@ -240,6 +259,8 @@ export async function matchSuppliers(
 ): Promise<MatchResponse> {
   if (USE_FIXTURES) return matchFixture(overrides);
 
-  const reqBody = MatchRequestSchema.parse({ requirements, overrides });
+  // The Express route expects requirement fields FLAT at the top level
+  // alongside the optional overrides key — not nested under "requirements".
+  const reqBody = MatchRequestSchema.parse({ ...requirements, overrides });
   return postJson<MatchResponse>('/api/match', reqBody, MatchResponseSchema);
 }

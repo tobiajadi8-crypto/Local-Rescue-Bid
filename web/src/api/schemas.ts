@@ -83,6 +83,10 @@ export const ToleranceSourceValueSchema = z.object({
 });
 export type ToleranceSourceValue = z.infer<typeof ToleranceSourceValueSchema>;
 
+/**
+ * Flat schema — used for fixtures and as the canonical in-memory shape.
+ * Requirement fields sit at the top level.
+ */
 export const ExtractResponseSchema = z.object({
   process: z.string(),
   material: z.string(),
@@ -97,12 +101,42 @@ export const ExtractResponseSchema = z.object({
 });
 export type ExtractResponse = z.infer<typeof ExtractResponseSchema>;
 
+/**
+ * Shape returned by the LIVE POST /api/extract endpoint:
+ *   { requirements: { ... }, sources: { ... }, issues: [...],
+ *     tolerance_source_values: [...] }
+ *
+ * client.ts normalizes this to ExtractResponse (flat) before returning to
+ * the rest of the app.  Fixtures are already flat so they bypass this path.
+ */
+export const LiveExtractResponseSchema = z.object({
+  requirements: z.object({
+    process: z.string(),
+    material: z.string(),
+    remaining_quantity: z.number().int().positive(),
+    due_at: z.string(),
+    receiving_inspection_minutes: z.number().int().nonnegative(),
+    cmm_report_required: z.boolean(),
+    tolerance_half_width_mm: z.number().nullable(),
+  }),
+  issues: z.array(IssueSchema),
+  tolerance_source_values: z.array(ToleranceSourceValueSchema).optional().default([]),
+  sources: z.record(z.string(), z.unknown()).optional(),
+});
+export type LiveExtractResponse = z.infer<typeof LiveExtractResponseSchema>;
+
 // ---------------------------------------------------------------------------
 // Match endpoint
 // ---------------------------------------------------------------------------
 
-export const MatchRequestSchema = z.object({
-  requirements: RequirementsSchema,
+/**
+ * The Express route expects requirement fields FLAT at the top level alongside
+ * the optional overrides object — not nested under a "requirements" key.
+ *
+ * Shape sent to POST /api/match:
+ *   { process, material, ..., tolerance_half_width_mm, overrides?: {...} }
+ */
+export const MatchRequestSchema = RequirementsSchema.extend({
   overrides: OverridesSchema.optional(),
 });
 export type MatchRequest = z.infer<typeof MatchRequestSchema>;
@@ -118,13 +152,19 @@ export type MatchRequest = z.infer<typeof MatchRequestSchema>;
  * DIFFERENCE FROM BRIEF: _derived and fixtureNotice are fixture-only fields
  * that the real API will never return; they are marked optional so live
  * responses validate cleanly.
+ *
+ * DIFFERENCE FROM LIVE API: The live /api/match response does NOT return
+ * requirements or review_reason. Both are optional so the schema validates
+ * real responses. Confirmed requirements are kept in frontend session state
+ * (confirmedRequirements) and passed to ResultsScreen independently.
  */
 export const MatchResponseSchema = z.object({
   status: z.enum(['matched', 'no_match', 'review_required']),
-  review_reason: z.string().nullable(),
+  review_reason: z.string().nullable().optional(),
   ranked_eligible_shop_ids: z.array(z.string()),
   recommended_shop_id: z.string().nullable(),
-  requirements: RequirementsSchema,
+  /** Present in fixtures; omitted by the live API. */
+  requirements: RequirementsSchema.optional(),
   supplier_outcomes: z.record(z.string(), OutcomeSchema),
   _derived: z.boolean().optional(),
   fixtureNotice: z.string().optional(),

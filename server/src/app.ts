@@ -33,6 +33,7 @@
  */
 
 import express, { Request, Response, NextFunction } from "express";
+import extractRouter from "./extraction/extract.route";
 import { CloudantV1 } from "@ibm-cloud/cloudant";
 import { cloudant, cloudantDb } from "./cloudantClient";
 import {
@@ -44,6 +45,7 @@ import {
 export const app = express();
 
 app.use(express.json());
+app.use(extractRouter);
 
 // ---------------------------------------------------------------------------
 // POST /api/match
