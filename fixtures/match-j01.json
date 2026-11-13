@@ -1,0 +1,57 @@
+{
+  "status": "matched",
+  "review_reason": null,
+  "ranked_eligible_shop_ids": ["S02", "S08"],
+  "recommended_shop_id": "S02",
+  "requirements": {
+    "process": "CNC milling",
+    "material": "6061-T6 aluminum",
+    "remaining_quantity": 180,
+    "due_at": "2026-11-20T12:00:00-05:00",
+    "receiving_inspection_minutes": 30,
+    "cmm_report_required": false,
+    "tolerance_half_width_mm": 0.05
+  },
+  "supplier_outcomes": {
+    "S01": {
+      "eligible": false,
+      "reason_codes": ["tolerance_too_loose"],
+      "estimated_receiving_complete_at": "2026-11-20T09:25:00-05:00"
+    },
+    "S02": {
+      "eligible": true,
+      "reason_codes": [],
+      "estimated_receiving_complete_at": "2026-11-20T10:15:00-05:00"
+    },
+    "S03": {
+      "eligible": false,
+      "reason_codes": ["insufficient_capacity"],
+      "estimated_receiving_complete_at": "2026-11-20T09:40:00-05:00"
+    },
+    "S04": {
+      "eligible": false,
+      "reason_codes": ["misses_deadline"],
+      "estimated_receiving_complete_at": "2026-11-20T12:15:00-05:00"
+    },
+    "S05": {
+      "eligible": false,
+      "reason_codes": ["insufficient_capacity"],
+      "estimated_receiving_complete_at": "2026-11-20T11:30:00-05:00"
+    },
+    "S06": {
+      "eligible": false,
+      "reason_codes": ["process_mismatch"],
+      "estimated_receiving_complete_at": "2026-11-20T09:00:00-05:00"
+    },
+    "S07": {
+      "eligible": false,
+      "reason_codes": ["material_unavailable"],
+      "estimated_receiving_complete_at": "2026-11-20T11:05:00-05:00"
+    },
+    "S08": {
+      "eligible": true,
+      "reason_codes": [],
+      "estimated_receiving_complete_at": "2026-11-20T10:25:00-05:00"
+    }
+  }
+}

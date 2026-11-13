@@ -1,0 +1,19 @@
+{
+  "requirements": {
+    "process": "CNC milling",
+    "material": "6061-T6 aluminum",
+    "remaining_quantity": 180,
+    "due_at": "2026-11-20T12:00:00-05:00",
+    "receiving_inspection_minutes": 30,
+    "cmm_report_required": false,
+    "tolerance_half_width_mm": 0.05
+  },
+  "overrides": {
+    "S02": {
+      "lot_ready_at": "2026-11-20T11:45:00-05:00"
+    },
+    "S08": {
+      "max_parts_in_slot": 179
+    }
+  }
+}
