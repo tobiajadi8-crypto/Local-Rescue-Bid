@@ -1,0 +1,26 @@
+{
+  "process": "CNC milling",
+  "material": "6061-T6 aluminum",
+  "remaining_quantity": 180,
+  "due_at": "2026-11-20T12:00:00-05:00",
+  "receiving_inspection_minutes": 30,
+  "cmm_report_required": false,
+  "tolerance_half_width_mm": 0.05,
+  "issues": [],
+  "sources": {
+    "process": "CNC mill out of service. Open a rush request for a Michigan supplier.",
+    "material": "Material: 6061-T6 aluminum",
+    "remaining_quantity": "Build quantity: 240 pieces. Finished and accepted before breakdown: 60.",
+    "due_at": "receiving has to sign off by 12:00 ET Friday, November 20, 2026",
+    "receiving_inspection_minutes": "Allow 30 minutes for incoming inspection after the courier arrives.",
+    "cmm_report_required": "A CMM report is optional.",
+    "tolerance_half_width_mm": "Critical hole center spacing: 32.00 \u00b10.05 mm."
+  },
+  "tolerance_source_values": [
+    {
+      "half_width": 0.05,
+      "unit": "mm",
+      "source": "Drawing excerpt \u00b7 Revision B"
+    }
+  ]
+}
