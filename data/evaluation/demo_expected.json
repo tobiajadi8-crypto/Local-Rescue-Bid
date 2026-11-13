@@ -1,0 +1,518 @@
+{
+  "J01": {
+    "requirements": {
+      "process": "CNC milling",
+      "material": "6061-T6 aluminum",
+      "remaining_quantity": 180,
+      "due_at": "2026-11-20T12:00:00-05:00",
+      "receiving_inspection_minutes": 30,
+      "cmm_report_required": false,
+      "tolerance_half_width_mm": 0.05
+    },
+    "tolerance_source_values": [
+      {
+        "half_width": 0.05,
+        "unit": "mm",
+        "source": "Drawing excerpt · Revision B"
+      }
+    ],
+    "status": "matched",
+    "review_reason": null,
+    "ranked_eligible_shop_ids": [
+      "S02",
+      "S08"
+    ],
+    "recommended_shop_id": "S02",
+    "supplier_outcomes": {
+      "S01": {
+        "eligible": false,
+        "reason_codes": [
+          "tolerance_too_loose"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:25:00-05:00"
+      },
+      "S02": {
+        "eligible": true,
+        "reason_codes": [],
+        "estimated_receiving_complete_at": "2026-11-20T10:15:00-05:00"
+      },
+      "S03": {
+        "eligible": false,
+        "reason_codes": [
+          "insufficient_capacity"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:40:00-05:00"
+      },
+      "S04": {
+        "eligible": false,
+        "reason_codes": [
+          "misses_deadline"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T12:15:00-05:00"
+      },
+      "S05": {
+        "eligible": false,
+        "reason_codes": [
+          "insufficient_capacity"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T11:30:00-05:00"
+      },
+      "S06": {
+        "eligible": false,
+        "reason_codes": [
+          "process_mismatch"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:00:00-05:00"
+      },
+      "S07": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T11:05:00-05:00"
+      },
+      "S08": {
+        "eligible": true,
+        "reason_codes": [],
+        "estimated_receiving_complete_at": "2026-11-20T10:25:00-05:00"
+      }
+    }
+  },
+  "J02": {
+    "requirements": {
+      "process": "CNC milling",
+      "material": "1018 steel",
+      "remaining_quantity": 80,
+      "due_at": "2026-11-20T12:00:00-05:00",
+      "receiving_inspection_minutes": 30,
+      "cmm_report_required": false,
+      "tolerance_half_width_mm": 0.0508
+    },
+    "tolerance_source_values": [
+      {
+        "half_width": 0.002,
+        "unit": "in",
+        "source": "Drawing excerpt · Revision B"
+      }
+    ],
+    "status": "matched",
+    "review_reason": null,
+    "ranked_eligible_shop_ids": [
+      "S03",
+      "S08",
+      "S07"
+    ],
+    "recommended_shop_id": "S03",
+    "supplier_outcomes": {
+      "S01": {
+        "eligible": false,
+        "reason_codes": [
+          "tolerance_too_loose"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:25:00-05:00"
+      },
+      "S02": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T10:15:00-05:00"
+      },
+      "S03": {
+        "eligible": true,
+        "reason_codes": [],
+        "estimated_receiving_complete_at": "2026-11-20T09:40:00-05:00"
+      },
+      "S04": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable",
+          "misses_deadline"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T12:15:00-05:00"
+      },
+      "S05": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T11:30:00-05:00"
+      },
+      "S06": {
+        "eligible": false,
+        "reason_codes": [
+          "process_mismatch"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:00:00-05:00"
+      },
+      "S07": {
+        "eligible": true,
+        "reason_codes": [],
+        "estimated_receiving_complete_at": "2026-11-20T11:05:00-05:00"
+      },
+      "S08": {
+        "eligible": true,
+        "reason_codes": [],
+        "estimated_receiving_complete_at": "2026-11-20T10:25:00-05:00"
+      }
+    }
+  },
+  "J03": {
+    "requirements": {
+      "process": "CNC milling",
+      "material": "6061-T6 aluminum",
+      "remaining_quantity": 60,
+      "due_at": "2026-11-20T12:00:00-05:00",
+      "receiving_inspection_minutes": 30,
+      "cmm_report_required": true,
+      "tolerance_half_width_mm": 0.05
+    },
+    "tolerance_source_values": [
+      {
+        "half_width": 0.05,
+        "unit": "mm",
+        "source": "Drawing excerpt · Revision B"
+      }
+    ],
+    "status": "matched",
+    "review_reason": null,
+    "ranked_eligible_shop_ids": [
+      "S03",
+      "S02",
+      "S05"
+    ],
+    "recommended_shop_id": "S03",
+    "supplier_outcomes": {
+      "S01": {
+        "eligible": false,
+        "reason_codes": [
+          "tolerance_too_loose",
+          "cmm_report_unavailable"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:25:00-05:00"
+      },
+      "S02": {
+        "eligible": true,
+        "reason_codes": [],
+        "estimated_receiving_complete_at": "2026-11-20T10:15:00-05:00"
+      },
+      "S03": {
+        "eligible": true,
+        "reason_codes": [],
+        "estimated_receiving_complete_at": "2026-11-20T09:40:00-05:00"
+      },
+      "S04": {
+        "eligible": false,
+        "reason_codes": [
+          "cmm_report_unavailable",
+          "misses_deadline"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T12:15:00-05:00"
+      },
+      "S05": {
+        "eligible": true,
+        "reason_codes": [],
+        "estimated_receiving_complete_at": "2026-11-20T11:30:00-05:00"
+      },
+      "S06": {
+        "eligible": false,
+        "reason_codes": [
+          "process_mismatch",
+          "cmm_report_unavailable"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:00:00-05:00"
+      },
+      "S07": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T11:05:00-05:00"
+      },
+      "S08": {
+        "eligible": false,
+        "reason_codes": [
+          "cmm_report_unavailable"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T10:25:00-05:00"
+      }
+    }
+  },
+  "J04": {
+    "requirements": {
+      "process": "CNC milling",
+      "material": "6061-T6 aluminum",
+      "remaining_quantity": 50,
+      "due_at": "2026-11-20T12:00:00-05:00",
+      "receiving_inspection_minutes": 30,
+      "cmm_report_required": false,
+      "tolerance_half_width_mm": null
+    },
+    "tolerance_source_values": [],
+    "status": "review_required",
+    "review_reason": "missing_tolerance",
+    "ranked_eligible_shop_ids": [],
+    "recommended_shop_id": null,
+    "supplier_outcomes": {}
+  },
+  "J05": {
+    "requirements": {
+      "process": "CNC milling",
+      "material": "7075-T6 aluminum",
+      "remaining_quantity": 250,
+      "due_at": "2026-11-20T12:00:00-05:00",
+      "receiving_inspection_minutes": 30,
+      "cmm_report_required": false,
+      "tolerance_half_width_mm": 0.05
+    },
+    "tolerance_source_values": [
+      {
+        "half_width": 0.05,
+        "unit": "mm",
+        "source": "Drawing excerpt · Revision B"
+      }
+    ],
+    "status": "no_match",
+    "review_reason": null,
+    "ranked_eligible_shop_ids": [],
+    "recommended_shop_id": null,
+    "supplier_outcomes": {
+      "S01": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable",
+          "tolerance_too_loose"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:25:00-05:00"
+      },
+      "S02": {
+        "eligible": false,
+        "reason_codes": [
+          "insufficient_capacity"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T10:15:00-05:00"
+      },
+      "S03": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable",
+          "insufficient_capacity"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:40:00-05:00"
+      },
+      "S04": {
+        "eligible": false,
+        "reason_codes": [
+          "misses_deadline"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T12:15:00-05:00"
+      },
+      "S05": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable",
+          "insufficient_capacity"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T11:30:00-05:00"
+      },
+      "S06": {
+        "eligible": false,
+        "reason_codes": [
+          "process_mismatch",
+          "material_unavailable"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:00:00-05:00"
+      },
+      "S07": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable",
+          "insufficient_capacity"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T11:05:00-05:00"
+      },
+      "S08": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable",
+          "insufficient_capacity"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T10:25:00-05:00"
+      }
+    }
+  },
+  "J06": {
+    "requirements": {
+      "process": "CNC milling",
+      "material": "304 stainless steel",
+      "remaining_quantity": 70,
+      "due_at": "2026-11-20T11:30:00-05:00",
+      "receiving_inspection_minutes": 30,
+      "cmm_report_required": true,
+      "tolerance_half_width_mm": 0.0254
+    },
+    "tolerance_source_values": [
+      {
+        "half_width": 0.001,
+        "unit": "in",
+        "source": "Drawing excerpt · Revision B"
+      }
+    ],
+    "status": "matched",
+    "review_reason": null,
+    "ranked_eligible_shop_ids": [
+      "S05"
+    ],
+    "recommended_shop_id": "S05",
+    "supplier_outcomes": {
+      "S01": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable",
+          "tolerance_too_loose",
+          "cmm_report_unavailable"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:25:00-05:00"
+      },
+      "S02": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable",
+          "tolerance_too_loose"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T10:15:00-05:00"
+      },
+      "S03": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable",
+          "tolerance_too_loose"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:40:00-05:00"
+      },
+      "S04": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable",
+          "tolerance_too_loose",
+          "cmm_report_unavailable",
+          "misses_deadline"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T12:15:00-05:00"
+      },
+      "S05": {
+        "eligible": true,
+        "reason_codes": [],
+        "estimated_receiving_complete_at": "2026-11-20T11:30:00-05:00"
+      },
+      "S06": {
+        "eligible": false,
+        "reason_codes": [
+          "process_mismatch",
+          "material_unavailable",
+          "tolerance_too_loose",
+          "cmm_report_unavailable"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:00:00-05:00"
+      },
+      "S07": {
+        "eligible": false,
+        "reason_codes": [
+          "tolerance_too_loose"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T11:05:00-05:00"
+      },
+      "S08": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable",
+          "tolerance_too_loose",
+          "cmm_report_unavailable"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T10:25:00-05:00"
+      }
+    }
+  },
+  "J07": {
+    "requirements": {
+      "process": "CNC milling",
+      "material": "6061-T6 aluminum",
+      "remaining_quantity": 180,
+      "due_at": "2026-11-20T10:10:00-05:00",
+      "receiving_inspection_minutes": 30,
+      "cmm_report_required": false,
+      "tolerance_half_width_mm": 0.05
+    },
+    "tolerance_source_values": [
+      {
+        "half_width": 0.05,
+        "unit": "mm",
+        "source": "Drawing excerpt · Revision B"
+      }
+    ],
+    "status": "no_match",
+    "review_reason": null,
+    "ranked_eligible_shop_ids": [],
+    "recommended_shop_id": null,
+    "supplier_outcomes": {
+      "S01": {
+        "eligible": false,
+        "reason_codes": [
+          "tolerance_too_loose"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:25:00-05:00"
+      },
+      "S02": {
+        "eligible": false,
+        "reason_codes": [
+          "misses_deadline"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T10:15:00-05:00"
+      },
+      "S03": {
+        "eligible": false,
+        "reason_codes": [
+          "insufficient_capacity"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:40:00-05:00"
+      },
+      "S04": {
+        "eligible": false,
+        "reason_codes": [
+          "misses_deadline"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T12:15:00-05:00"
+      },
+      "S05": {
+        "eligible": false,
+        "reason_codes": [
+          "insufficient_capacity",
+          "misses_deadline"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T11:30:00-05:00"
+      },
+      "S06": {
+        "eligible": false,
+        "reason_codes": [
+          "process_mismatch"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T09:00:00-05:00"
+      },
+      "S07": {
+        "eligible": false,
+        "reason_codes": [
+          "material_unavailable",
+          "misses_deadline"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T11:05:00-05:00"
+      },
+      "S08": {
+        "eligible": false,
+        "reason_codes": [
+          "misses_deadline"
+        ],
+        "estimated_receiving_complete_at": "2026-11-20T10:25:00-05:00"
+      }
+    }
+  }
+}

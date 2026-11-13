@@ -1,0 +1,130 @@
+[
+  {
+    "shop_id": "S01",
+    "shop_name": "Red Finch Toolworks",
+    "city": "Warren",
+    "state": "MI",
+    "process": "CNC milling",
+    "materials": [
+      "6061-T6 aluminum",
+      "1018 steel"
+    ],
+    "min_supported_bilateral_half_width_mm": 0.1,
+    "max_parts_in_slot": 300,
+    "lot_ready_at": "2026-11-20T08:30:00-05:00",
+    "return_minutes_to_detroit": 25,
+    "cmm_report_available": false
+  },
+  {
+    "shop_id": "S02",
+    "shop_name": "Juniper Spindle Works",
+    "city": "Livonia",
+    "state": "MI",
+    "process": "CNC milling",
+    "materials": [
+      "6061-T6 aluminum",
+      "7075-T6 aluminum"
+    ],
+    "min_supported_bilateral_half_width_mm": 0.05,
+    "max_parts_in_slot": 220,
+    "lot_ready_at": "2026-11-20T09:00:00-05:00",
+    "return_minutes_to_detroit": 45,
+    "cmm_report_available": true
+  },
+  {
+    "shop_id": "S03",
+    "shop_name": "Copper Kite Machining",
+    "city": "Pontiac",
+    "state": "MI",
+    "process": "CNC milling",
+    "materials": [
+      "6061-T6 aluminum",
+      "1018 steel"
+    ],
+    "min_supported_bilateral_half_width_mm": 0.04,
+    "max_parts_in_slot": 120,
+    "lot_ready_at": "2026-11-20T08:15:00-05:00",
+    "return_minutes_to_detroit": 55,
+    "cmm_report_available": true
+  },
+  {
+    "shop_id": "S04",
+    "shop_name": "Slate Lantern Tool Co.",
+    "city": "Taylor",
+    "state": "MI",
+    "process": "CNC milling",
+    "materials": [
+      "6061-T6 aluminum",
+      "7075-T6 aluminum"
+    ],
+    "min_supported_bilateral_half_width_mm": 0.05,
+    "max_parts_in_slot": 280,
+    "lot_ready_at": "2026-11-20T11:10:00-05:00",
+    "return_minutes_to_detroit": 35,
+    "cmm_report_available": false
+  },
+  {
+    "shop_id": "S05",
+    "shop_name": "Birch Relay Precision",
+    "city": "Auburn Hills",
+    "state": "MI",
+    "process": "CNC milling",
+    "materials": [
+      "6061-T6 aluminum",
+      "304 stainless steel"
+    ],
+    "min_supported_bilateral_half_width_mm": 0.025,
+    "max_parts_in_slot": 90,
+    "lot_ready_at": "2026-11-20T10:00:00-05:00",
+    "return_minutes_to_detroit": 60,
+    "cmm_report_available": true
+  },
+  {
+    "shop_id": "S06",
+    "shop_name": "Gray Heron Turning",
+    "city": "Dearborn",
+    "state": "MI",
+    "process": "CNC turning",
+    "materials": [
+      "6061-T6 aluminum",
+      "1018 steel"
+    ],
+    "min_supported_bilateral_half_width_mm": 0.05,
+    "max_parts_in_slot": 320,
+    "lot_ready_at": "2026-11-20T08:00:00-05:00",
+    "return_minutes_to_detroit": 30,
+    "cmm_report_available": false
+  },
+  {
+    "shop_id": "S07",
+    "shop_name": "Maple Anvil Machining",
+    "city": "Novi",
+    "state": "MI",
+    "process": "CNC milling",
+    "materials": [
+      "1018 steel",
+      "304 stainless steel"
+    ],
+    "min_supported_bilateral_half_width_mm": 0.05,
+    "max_parts_in_slot": 200,
+    "lot_ready_at": "2026-11-20T09:45:00-05:00",
+    "return_minutes_to_detroit": 50,
+    "cmm_report_available": true
+  },
+  {
+    "shop_id": "S08",
+    "shop_name": "Blue Aster Toolworks",
+    "city": "Sterling Heights",
+    "state": "MI",
+    "process": "CNC milling",
+    "materials": [
+      "6061-T6 aluminum",
+      "1018 steel"
+    ],
+    "min_supported_bilateral_half_width_mm": 0.05,
+    "max_parts_in_slot": 200,
+    "lot_ready_at": "2026-11-20T09:15:00-05:00",
+    "return_minutes_to_detroit": 40,
+    "cmm_report_available": false
+  }
+]
